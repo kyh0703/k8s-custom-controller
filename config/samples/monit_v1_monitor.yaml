@@ -1,0 +1,6 @@
+apiVersion: monit.kyh0703.github.io/v1
+kind: Monitor
+metadata:
+  name: monitor-sample
+spec:
+  # TODO(user): Add fields here

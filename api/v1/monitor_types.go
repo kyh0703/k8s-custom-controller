@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package v1beta1
+package v1
 
 import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -23,17 +23,17 @@ import (
 // EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
 // NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
 
-// FrigateSpec defines the desired state of Frigate
-type FrigateSpec struct {
+// MonitorSpec defines the desired state of Monitor
+type MonitorSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
 
-	// Foo is an example field of Frigate. Edit frigate_types.go to remove/update
+	// Foo is an example field of Monitor. Edit monitor_types.go to remove/update
 	Foo string `json:"foo,omitempty"`
 }
 
-// FrigateStatus defines the observed state of Frigate
-type FrigateStatus struct {
+// MonitorStatus defines the observed state of Monitor
+type MonitorStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
 }
@@ -41,24 +41,24 @@ type FrigateStatus struct {
 //+kubebuilder:object:root=true
 //+kubebuilder:subresource:status
 
-// Frigate is the Schema for the frigates API
-type Frigate struct {
+// Monitor is the Schema for the monitors API
+type Monitor struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   FrigateSpec   `json:"spec,omitempty"`
-	Status FrigateStatus `json:"status,omitempty"`
+	Spec   MonitorSpec   `json:"spec,omitempty"`
+	Status MonitorStatus `json:"status,omitempty"`
 }
 
 //+kubebuilder:object:root=true
 
-// FrigateList contains a list of Frigate
-type FrigateList struct {
+// MonitorList contains a list of Monitor
+type MonitorList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []Frigate `json:"items"`
+	Items           []Monitor `json:"items"`
 }
 
 func init() {
-	SchemeBuilder.Register(&Frigate{}, &FrigateList{})
+	SchemeBuilder.Register(&Monitor{}, &MonitorList{})
 }

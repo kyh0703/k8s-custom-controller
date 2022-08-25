@@ -1,13 +1,13 @@
-# permissions for end users to edit frigates.
+# permissions for end users to edit monitors.
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: frigate-editor-role
+  name: monitor-editor-role
 rules:
 - apiGroups:
-  - ship.kyh0703.github.io
+  - monit.kyh0703.github.io
   resources:
-  - frigates
+  - monitors
   verbs:
   - create
   - delete
@@ -17,8 +17,8 @@ rules:
   - update
   - watch
 - apiGroups:
-  - ship.kyh0703.github.io
+  - monit.kyh0703.github.io
   resources:
-  - frigates/status
+  - monitors/status
   verbs:
   - get

@@ -4,7 +4,7 @@ layout:
 plugins:
   manifests.sdk.operatorframework.io/v2: {}
   scorecard.sdk.operatorframework.io/v2: {}
-projectName: opeator-sdk
+projectName: monitor-operator
 repo: github.com/kyh0703/k8s-custom-controller
 resources:
 - api:
@@ -12,8 +12,8 @@ resources:
     namespaced: true
   controller: true
   domain: kyh0703.github.io
-  group: ship
-  kind: Frigate
-  path: github.com/kyh0703/k8s-custom-controller/api/v1beta1
-  version: v1beta1
+  group: monit
+  kind: Monitor
+  path: github.com/kyh0703/k8s-custom-controller/api/v1
+  version: v1
 version: "3"

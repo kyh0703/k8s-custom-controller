@@ -31,7 +31,7 @@ import (
 	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	shipv1beta1 "github.com/kyh0703/k8s-custom-controller/api/v1beta1"
+	monitv1 "github.com/kyh0703/k8s-custom-controller/api/v1"
 	//+kubebuilder:scaffold:imports
 )
 
@@ -65,7 +65,7 @@ var _ = BeforeSuite(func() {
 	Expect(err).NotTo(HaveOccurred())
 	Expect(cfg).NotTo(BeNil())
 
-	err = shipv1beta1.AddToScheme(scheme.Scheme)
+	err = monitv1.AddToScheme(scheme.Scheme)
 	Expect(err).NotTo(HaveOccurred())
 
 	//+kubebuilder:scaffold:scheme
