@@ -12,8 +12,8 @@ resources:
     namespaced: true
   controller: true
   domain: kyh0703.github.io
-  group: monit
-  kind: Monitor
-  path: github.com/kyh0703/memcached-operator/api/v1
-  version: v1
+  group: cache
+  kind: Memcached
+  path: github.com/kyh0703/memcached-operator/api/v1alpha1
+  version: v1alpha1
 version: "3"
