@@ -18,6 +18,7 @@ package controllers
 
 import (
 	"context"
+	"fmt"
 	"reflect"
 
 	appsv1 "k8s.io/api/apps/v1"
@@ -25,13 +26,14 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	ctrl "sigs.k8s.io/controller-runtime"
 
+	"github.com/go-logr/logr"
+	"github.com/go-logr/logr/funcr"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/types"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/controller"
 
-	"github.com/go-logr/logr"
 	cachev1alpha1 "github.com/kyh0703/memcached-operator/api/v1alpha1"
 )
 
@@ -182,6 +184,16 @@ func getPodNames(pods []corev1.Pod) []string {
 		podNames = append(podNames, pod.Name)
 	}
 	return podNames
+}
+
+func NewStdoutLogger() logr.Logger {
+	return funcr.New(func(prefix, args string) {
+		if prefix != "" {
+			_ = fmt.Sprintf("%s: %s\n", prefix, args)
+		} else {
+			fmt.Println(args)
+		}
+	}, funcr.Options{})
 }
 
 // SetupWithManager sets up the controller with the Manager.
