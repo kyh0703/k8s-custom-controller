@@ -1,0 +1,9 @@
+domain: kyh0703.github.io
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: opeator-sdk
+repo: github.com/kyh0703/k8s-custom-controller
+version: "3"
