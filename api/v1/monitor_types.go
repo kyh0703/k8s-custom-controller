@@ -29,13 +29,14 @@ type MonitorSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of Monitor. Edit monitor_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	Interval string `json:"interval"`
 }
 
 // MonitorStatus defines the observed state of Monitor
 type MonitorStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+	Nodes []string `json:"nodes"`
 }
 
 //+kubebuilder:object:root=true
