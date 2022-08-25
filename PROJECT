@@ -5,7 +5,7 @@ plugins:
   manifests.sdk.operatorframework.io/v2: {}
   scorecard.sdk.operatorframework.io/v2: {}
 projectName: monitor-operator
-repo: github.com/kyh0703/k8s-custom-controller
+repo: github.com/kyh0703/memcached-operator
 resources:
 - api:
     crdVersion: v1
@@ -14,6 +14,6 @@ resources:
   domain: kyh0703.github.io
   group: monit
   kind: Monitor
-  path: github.com/kyh0703/k8s-custom-controller/api/v1
+  path: github.com/kyh0703/memcached-operator/api/v1
   version: v1
 version: "3"

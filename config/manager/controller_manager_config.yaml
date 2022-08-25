@@ -8,7 +8,7 @@ webhook:
   port: 9443
 leaderElection:
   leaderElect: true
-  resourceName: cadaa5b6.kyh0703.github.io
+  resourceName: 76d2ce75.kyh0703.github.io
 # leaderElectionReleaseOnCancel defines if the leader should step down volume
 # when the Manager ends. This requires the binary to immediately end when the
 # Manager is stopped, otherwise, this setting is unsafe. Setting this significantly

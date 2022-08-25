@@ -1,4 +1,4 @@
-module github.com/kyh0703/k8s-custom-controller
+module github.com/kyh0703/memcached-operator
 
 go 1.18
 

@@ -24,7 +24,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/log"
 
-	monitv1 "github.com/kyh0703/k8s-custom-controller/api/v1"
+	monitv1 "github.com/kyh0703/memcached-operator/api/v1"
 )
 
 // MonitorReconciler reconciles a Monitor object
